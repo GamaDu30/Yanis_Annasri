@@ -21,3 +21,15 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(element);
     });
 });
+
+document.getElementById('triggerImage').addEventListener('click', function() {
+    var hiddenSection = document.getElementById('hidden-section');
+
+    if (hiddenSection.style.visibility === 'hidden') {
+        hiddenSection.style.opacity = '1';
+        hiddenSection.style.visibility = 'visible';
+    } else {
+        hiddenSection.style.opacity = '0';
+        hiddenSection.style.visibility = 'hidden';
+    }
+});

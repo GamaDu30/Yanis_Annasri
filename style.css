@@ -18,7 +18,9 @@
 html {
     font-family: Poppins;
     color: #DDE6ED;
-    
+    background-image: url("assets/Background.jpg");
+    background-attachment: fixed;
+
     background-color: #27374D;
 }
 
@@ -90,6 +92,7 @@ button:hover {
 
 .introduction-text {
     font-size: 3vw;
+    text-shadow: 2px 2px 1px #27374D;
 }
 
 .projects {
@@ -101,7 +104,7 @@ button:hover {
 
 .pp {
     width: 10vw;
-    height: 10vw;    
+    height: 10vw;
     margin: 2vw;
 
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
@@ -119,10 +122,12 @@ button:hover {
 }
 
 .project {
+    z-index: 0;
+    position: relative;
     padding: 30px; /* Add padding to separate content from borders */
     text-align: center; /* Center content within grid items */
     transition: transform 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 
 .slideIn {
@@ -171,8 +176,8 @@ button:hover {
 }
 
 .skill {
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    top: 0;
 }
 
 .skill-logo {
@@ -181,18 +186,23 @@ button:hover {
     padding: 1vw;
 
     -webkit-filter: drop-shadow(0px 0px 5px #000000);
-    filter:         drop-shadow(0px 0px 5px #000000);
+    filter: drop-shadow(0px 0px 5px #000000);
 }
 
 .skill-text {
-    font-size: 1vw;
+    font-size: 1.5vw;
     margin-left: 5vw;
     margin-right: 5vw;
 }
 
 .sub-title {
-    font-size: 3vw;
-    text-decoration: underline;
+    font-size: 4vw;
+    /*text-decoration: underline;*/
 
     text-shadow: 2px 2px 1px #27374D;
+}
+
+.skill-title {
+    font-size: 3vw;
+    font-weight: bold;
 }
