@@ -1,9 +1,25 @@
-@font-face { font-family: Poppins; src: url('assets/Poppins-Medium.ttf'); }
+@font-face {
+    font-family: Poppins;
+    src: url('assets/Poppins-Medium.ttf');
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 html {
-    background-image: url('assets/Background1.png');
     font-family: Poppins;
-    color: #aaaacc;
+    color: #DDE6ED;
+    
+    background-color: #27374D;
 }
 
 body {
@@ -15,9 +31,9 @@ body {
 }
 
 .side-panel {
-    width: 200px;
-    padding: 10px;
-    background-color: #444444;
+    width: 10vw;
+    padding: 1vw;
+    background-color: #526D82;
     position: fixed;
     left: 0;
     top: 0;
@@ -25,9 +41,16 @@ body {
     display: flex;
     flex-direction: column;
     z-index: 1;
-    
+
     border-right: solid #222222 4px;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+
+.main-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: calc(10vw * 1.1);
 }
 
 button {
@@ -43,30 +66,30 @@ button {
 }
 
 button:hover {
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
 }
 
-.main-panel {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-left: 220px;
-}
-
-.panel {    
-    margin: 10px;
+.panel {
+    margin: 2vw;
+    margin-right: 5vw;
+    margin-left: 5vw;
     padding: 20px;
     text-align: center;
-    
-    border: double 4px transparent;
-    border-radius: 80px;
-    background-image: linear-gradient(rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5)), linear-gradient(to bottom right, #444455,#555588);
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
+
+    border: solid 3px;
+    border-color: #9DB2BF;
+    border-radius: 50px;
+
+    background-color: #526D82;
 }
 
 .introduction {
-    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+}
+
+.introduction-text {
+    font-size: 3vw;
 }
 
 .projects {
@@ -78,7 +101,12 @@ button:hover {
 
 .pp {
     width: 10vw;
-    height: auto;
+    height: 10vw;    
+    margin: 2vw;
+
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 50%; /* Create a circular shape */
+    overflow: hidden;
 }
 
 .projet-img {
@@ -87,14 +115,25 @@ button:hover {
     object-fit: cover;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
 }
 
 .project {
-    /*border: 1px solid #ccc; !* Add a border for better visualization *!*/
     padding: 30px; /* Add padding to separate content from borders */
     text-align: center; /* Center content within grid items */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
     font-size: 1vw;
+}
+
+.slideIn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
+}
+
+.slideIn.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .project:hover {
@@ -103,4 +142,56 @@ button:hover {
 
 .project:hover .projet-img {
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+}
+
+.side-logo {
+    position: absolute;
+    bottom: 3vw;
+    left: 0px;
+    right: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-logo-img {
+    width: 2.5vw;
+    height: auto;
+    margin: 0 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+}
+
+.skill {
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-logo {
+    width: 7.5vw;
+    height: auto;
+    padding: 1vw;
+
+    -webkit-filter: drop-shadow(0px 0px 5px #000000);
+    filter:         drop-shadow(0px 0px 5px #000000);
+}
+
+.skill-text {
+    font-size: 1vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.sub-title {
+    font-size: 3vw;
+    text-decoration: underline;
 }
