@@ -147,21 +147,20 @@ button:hover {
 .side-logo {
     position: absolute;
     bottom: 3vw;
-    left: 0px;
-    right: 0px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .side-logo-img {
-    width: 2.5vw;
+    width: 50%;
     height: auto;
-    margin: 0 10px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    overflow: hidden;
+
+    display: block;
+    /*margin: auto; !* Center the images horizontally inside the container *!*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5vh;
 }
 
 .skills {
@@ -194,4 +193,6 @@ button:hover {
 .sub-title {
     font-size: 3vw;
     text-decoration: underline;
+
+    text-shadow: 2px 2px 1px #27374D;
 }
