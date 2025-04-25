@@ -7,9 +7,11 @@
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -100,7 +102,8 @@ button:hover {
 .projects {
     display: grid;
     grid-template-columns: repeat(2, minmax(10px, 1fr));
-    grid-template-rows: repeat(2, minmax(10px, 1fr));;
+    grid-template-rows: repeat(2, minmax(10px, 1fr));
+    ;
     gap: 10px;
 }
 
@@ -110,7 +113,8 @@ button:hover {
     margin: 2vw;
 
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    border-radius: 50%; /* Create a circular shape */
+    border-radius: 50%;
+    /* Create a circular shape */
     overflow: hidden;
 }
 
@@ -126,8 +130,10 @@ button:hover {
 .project {
     z-index: 0;
     position: relative;
-    padding: 30px; /* Add padding to separate content from borders */
-    text-align: center; /* Center content within grid items */
+    padding: 30px;
+    /* Add padding to separate content from borders */
+    text-align: center;
+    /* Center content within grid items */
     transition: transform 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
     font-size: 1.5vw;
 }
@@ -174,7 +180,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    align-items: center;
+    align-items: start;
 }
 
 .skill {
@@ -187,14 +193,14 @@ button:hover {
     height: auto;
     padding: 1vw;
 
-    -webkit-filter: drop-shadow(0px 0px 5px #000000);
+    /* -webkit-filter: drop-shadow(0px 0px 5px #000000); */
     filter: drop-shadow(0px 0px 5px #000000);
 }
 
 .skill-text {
     font-size: 1.5vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
 }
 
 .sub-title {
