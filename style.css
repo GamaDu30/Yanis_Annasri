@@ -19,10 +19,10 @@
 
 html {
     font-family: Poppins;
-    color: #DDE6ED;
+    color: #ffffdf;
 
-    background-color: #5283ab;
-    background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+    background-color: #3e6288;
+    background-image: url(http://www.transparenttextures.com/patterns/diagmonds.png);
     background-attachment: fixed;
 }
 
@@ -37,8 +37,8 @@ body {
 .side-panel {
     width: 10vw;
     padding: 1vw;
-    background-color: #526D82;
-    background-image: url("assets/Background.png");
+    background-color: #547792;
+    background-image: url("assets/panelBg.png");
     position: fixed;
     left: 0;
     top: 0;
@@ -58,22 +58,6 @@ body {
     margin-left: calc(10vw * 1.1);
 }
 
-button {
-    margin-bottom: 20px;
-    padding: 8px;
-    border: none;
-    background-color: transparent;
-    color: #fff;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 1.5vw;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-button:hover {
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
-}
-
 .panel {
     margin: 2vw;
     margin-right: 5vw;
@@ -82,11 +66,28 @@ button:hover {
     text-align: center;
 
     border: solid 3px;
-    border-color: #9DB2BF;
+    border-color: #94B4C1;
     border-radius: 50px;
 
-    background-color: #526D82;
-    background-image: url("assets/Background.png");
+    background-color: #547792;
+    background-image: url("assets/panelBg.png");
+    background-size: 250px;
+}
+
+button {
+    margin-bottom: 20px;
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    color: #ffffdf;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.5vw;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
 }
 
 .introduction {
@@ -136,6 +137,8 @@ button:hover {
     /* Center content within grid items */
     transition: transform 0.1s ease-in-out, box-shadow 0.3s ease-in-out;
     font-size: 1.5vw;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 .slideIn {
